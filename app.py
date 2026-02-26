@@ -19,7 +19,7 @@ def format_response(success: bool, data: dict, rc_number: str):
             },
             "data": [data] if data else []
         },
-        "credit": "Mr. Anonymous"
+        "developer": "mr_anonymous_404.t.me"
     }
 
 @app.route('/', methods=['GET'])
@@ -33,7 +33,7 @@ def root_instructions():
                 'endpoint': '/rc?key=&rc='
             }]
         },
-        "credit": "Mr. Anonymous"
+        "developer": "mr_anonymous_404.t.me"
     }
     return jsonify(response), 200
 
