@@ -6,7 +6,8 @@ app = Flask(__name__)
 app.json.sort_keys = False
 
 apiKeys = {
-    "test": "anon404"
+    "personal": "anonx561",
+    "temp": "temp043"
 }
 
 def format_response(success: bool, data: dict, rc_number: str):
