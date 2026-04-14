@@ -72,7 +72,7 @@ def get_rc_details():
             final_data = {}
             cards = soup.select(".hrc-details-card")
 
-            if not cards and len(cards) == 1:
+            if not cards or len(cards) == 1:
                 error_data = {
                     "error_code": 404,
                     "message": f"RC details for '{rc}' not found or invalid RC"
