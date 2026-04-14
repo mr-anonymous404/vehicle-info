@@ -15,7 +15,7 @@ def format_response(success: bool, data: dict, rc_number: str):
         "response": {
             "parameters": {
                 "value": rc_number,
-                "service": "rc info",
+                "service": "Vehicle RC Info",
                 "success": success
             },
             "data": [data] if data else []
@@ -29,7 +29,7 @@ def root_instructions():
         "response": {
             'status': 'active',
             'instructions': [{
-                'service': 'rc info',
+                'service': 'Vehicle RC Info',
                 'method': 'GET',
                 'endpoint': '/rc?key=&rc='
             }]
