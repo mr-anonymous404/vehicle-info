@@ -65,7 +65,7 @@ def get_rc_details():
     }
 
     try:
-        response = requests.get(url, headers=headers, timeout=10)
+        response = requests.get(url, headers=headers, timeout=20)
 
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
@@ -117,7 +117,7 @@ def get_rc_details():
     except requests.RequestException as e:
         error_data = {
             "error_code": 500,
-            "message": f"Internal server error: {str(e)}"
+            "message": f"Internal server error"
         }
         return jsonify(format_response(False, error_data, rc)), 500
 
